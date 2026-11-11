@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--bg3);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 10rem;
+    height: 5rem;
+    width: 80%;
+    margin: 0.4rem auto;
+    border-radius: 0.2rem;
+    box-shadow: 11px 12px 15px -7px rgba(0, 0, 0, 0.18);
+    
+
+    img{
+        min-width: 10rem;
+        max-width: 15rem;
+        width: 100%;
+    }
+
+    h1{
+        font-family: var(--font-family);
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--color2);
+    }
+
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 80%;
+    margin: 1.4rem auto;
+    padding: 1.5rem 4.5rem;
+    background-image: linear-gradient(to top, var(--bg3), var(--bg5));
+    box-shadow: 11px 12px 15px -7px rgba(0, 0, 0, 0.18);
+    border: none;
+    border-radius: 0.2rem;
+
+    h2{
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--color2);
+        font-family: var(--font-family);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 1.5rem 0 0.75rem;
+        border-bottom: 0.2rem solid var(--bg2);
+        margin-bottom: 1.25rem;              
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    max-width: 100rem;
+    background-color: var(--bg3);
+    padding: 1rem 5rem;
+}
+
+.dados-form {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 5rem;
+}
+
+.campos-form{
+    display: grid;
+    grid: 1fr;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+
+    label{
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-weight: 100;
+        color: var(--color2);
+    }
+
+    input{
+        width: 40rem;
+        height: 2rem;
+        border-radius: 0.3rem;
+        border: 0.1rem solid var(--border);
+        padding: 0.4rem;
+        font-family: var(--font-family);
+    }
+
+    select{
+        width: 40rem;
+        height: 2rem;
+        border-radius: 0.3rem;
+        border: 0.1rem solid var(--border);
+        padding: 0.2rem;
+        font-family: var(--font-family);
+    }
+
+    span{
+        color: brown;
+        font-family: var(--font-family);
+    }
+
+    small{
+        font-family: var(--font-family);
+        font-size: 0.5rem;
+    }
+
+    option{
+        font-family: var(--font-family);
+    }
+}
+
+.dados-form-anexo{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+}
+
+.anexos-form{
+    display: grid;
+    grid: 1fr;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+
+    label{
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-weight: 100;
+        color: var(--color2);
+    }
+
+    input{
+        width:  85rem;
+        height: 2rem;
+        border-radius: 0.3rem;
+        border: 0.1rem solid var(--border);
+        padding: 0.2rem;
+        font-family: var(--font-family);
+    }
+
+    span{
+        color: brown;
+        font-family: var(--font-family);
+    }
+
+    small{
+        font-family: var(--font-family);
+        font-size: 0.5rem;
+    }
+    
+
+}
+
+input[type="file"]:focus,
+    select:focus{
+    border-color: var(--bg);
+    box-shadow: 0 0 0 0.1rem rgb(75, 154, 238);
+    background-color: var(--bg);
+}
+
+input[type="file"] {
+  height: 3rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color3);
+  background-color: transparent;
+  border: solid 0.1rem var(--border);
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  font-family: var(--font-family);
+  color: var(--color2);
+  background-color: var(--button);
+  border: solid 0.1rem var(--border);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-right: 0.75rem;
+  transition: background-color 0.2s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: var(--bg4);
+  color: var(--color);
+  transition: all 0.5s;
+}
+
+button{
+    background-color: var(--bg2);
+    color: var(--color);
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    width: 10rem;
+    height: 2rem;
+    
+}
