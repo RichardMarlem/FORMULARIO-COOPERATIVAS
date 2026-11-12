@@ -15,13 +15,13 @@ body{
 header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1.5rem 10rem;
     height: 5rem;
-    width: 80%;
+    width: 100%;
     margin: 0.4rem auto;
     border-radius: 0.2rem;
-    box-shadow: 11px 12px 15px -7px rgba(0, 0, 0, 0.18);
+    background-color: transparent;
     
 
     img{
@@ -34,7 +34,7 @@ header{
         font-family: var(--font-family);
         font-size: 1.5rem;
         font-weight: 400;
-        color: var(--color2);
+        color: var(--color3);
     }
 
 }
@@ -65,6 +65,14 @@ header{
     }
 }
 
+.etapa[hidden] {
+    display: none;
+}
+
+.etapa.ativa {
+    display: block;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -76,6 +84,8 @@ form{
     background-color: var(--bg3);
     padding: 1rem 5rem;
 }
+
+
 
 .dados-form {
     margin-top: 1rem;
@@ -210,12 +220,196 @@ input[type="file"]::file-selector-button:hover {
   transition: all 0.5s;
 }
 
+.termos-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  background-color: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  width:  85rem;
+  margin-top: 1rem;
+
+    label{
+        font-family: var(--font-family);
+        font-size: 0.8rem;
+        font-weight: 100;
+        color: var(--color2);
+    }
+
+    strong{
+        font-weight: bold;
+    }
+
+    a{
+        color: var(--color3);
+    }
+}
+
+.termos-checkbox input[type="checkbox"] {
+  margin-top: 0.2rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  min-width: 1.1rem;
+  accent-color: var(--color);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.dados-checkbox-deficiencia{
+    display: flex;
+    flex-direction: column;
+
+    label{
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-weight: 100;
+        color: var(--color2);
+    }
+}
+
+.dados-checkbox-estrangerio{
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+
+    label{
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-weight: 100;
+        color: var(--color2);
+    }
+}
+
+.dados-checkbox-campos-estrangerio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.65rem;
+  background-color: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 0.5rem;
+  margin-top: 0.5rem;
+
+  span{
+    font-family: var(--font-family);
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: var(--color2);
+  }
+
+}
+
+.dados-checkbox-campos-estrangerio input[type="checkbox"] {
+  width: 1.1rem;
+  height: 0.9rem;
+  min-width: 1.1rem;
+  accent-color: var(--color);
+  cursor: pointer;
+  flex-shrink: 0;  
+}
+
+.dados-checkbox-setor{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.65rem;
+    background-color: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 0.5rem;
+    margin-top: 0.5rem;
+
+    span{
+        font-family: var(--font-family);
+        font-size: 0.8rem;
+        font-weight: 100;
+        color: var(--color2);
+    }
+}
+
+.campos-checkbox-setor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.dados-checkbox-setor input[type="checkbox"] {
+  width: 1.1rem;
+  height: 0.9rem;
+  min-width: 1.1rem;
+  accent-color: var(--color);
+  cursor: pointer;
+  flex-shrink: 0;  
+}
+
+.campos-checkbox-estrangeiro{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.dados-checkbox input[type="checkbox"] {
+  width: 1.1rem;
+  height: 0.9rem;
+  min-width: 1.1rem;
+  accent-color: var(--color);
+  cursor: pointer;
+  flex-shrink: 0;  
+}
+
+
+.dados-checkbox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.65rem;
+  background-color: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 0.5rem;
+  margin-top: 0.5rem;
+
+  span{
+    font-family: var(--font-family);
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: var(--color2);
+  }
+
+}
+
+.dados-checkbox input[type="checkbox"] {
+  width: 1.1rem;
+  height: 0.9rem;
+  min-width: 1.1rem;
+  accent-color: var(--color);
+  cursor: pointer;
+  flex-shrink: 0;  
+}
+
+
+
 button{
-    background-color: var(--bg2);
-    color: var(--color);
+    background-color: transparent;
+    border: 0.1rem solid var(--border);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    color: var(--color2);
     font-family: var(--font-family);
     text-transform: uppercase;
     width: 10rem;
     height: 2rem;
-    
+    margin-top: 1rem;
+    transition: all 0.5s;
 }
+
+button:hover{
+    transition: all 0.5s;
+    border: 0.5rem solid var(--bg3);
+}
+
