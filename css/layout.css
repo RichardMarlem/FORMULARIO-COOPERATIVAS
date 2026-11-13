@@ -15,7 +15,7 @@ body{
 header{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 1.5rem 10rem;
     height: 5rem;
     width: 100%;
@@ -23,6 +23,22 @@ header{
     border-radius: 0.2rem;
     background-color: transparent;
     
+    p{
+        font-family: var(--font-family);
+        color: var(--color2);
+    }
+
+    a{
+        font-family: var(--font-family);
+        text-decoration: none;
+        width: 14rem;
+        padding: 0.5rem;
+        border-radius: 0.4rem;
+        background-color: var(--bg5);
+        color: var(--color4);
+        transition: all 0.5s;
+        border: 0.1rem solid var(--bg5);
+    }
 
     img{
         min-width: 10rem;
@@ -30,25 +46,45 @@ header{
         width: 100%;
     }
 
+}
+
+header a:hover{
+    background-color: transparent;
+    border: 0.1rem solid var(--border2);
+    color: var(--color4);
+}
+
+main{
+    background-color: var(--bg3);
+    height: 100%;
+}
+
+.apresentacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     h1{
         font-family: var(--font-family);
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: var(--color3);
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--color4);
+        text-transform: uppercase;
     }
-
 }
+
 
 .principal{
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
+    height: auto;
     margin: 1.4rem auto;
     padding: 1.5rem 4.5rem;
-    background-image: linear-gradient(to top, var(--bg3), var(--bg5));
-    box-shadow: 11px 12px 15px -7px rgba(0, 0, 0, 0.18);
+    background-image: linear-gradient(to bottom, var(--bg3), var(--bg2), var(--bg3));
+    box-shadow: 8px 9px 12px -2px rgba(223, 219, 219, 0.18);
     border: none;
     border-radius: 0.2rem;
 
@@ -65,6 +101,16 @@ header{
     }
 }
 
+.etapa{
+     height: 79vh;
+     padding: 1rem 5rem;
+     background-color: var(--bg3);
+     border: 0.1rem solid var(--bg3);
+     border-radius: 0.4rem;
+     overflow-y: auto;
+     scroll-behavior: smooth;
+}
+
 .etapa[hidden] {
     display: none;
 }
@@ -73,16 +119,17 @@ header{
     display: block;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
     min-width: 0;
-    max-width: 100rem;
-    background-color: var(--bg3);
-    padding: 1rem 5rem;
+    max-width: 105rem;
+    height: auto;
+    border-radius: 0.4rem;
+    
 }
 
 
@@ -138,6 +185,7 @@ form{
 
     option{
         font-family: var(--font-family);
+        background-color: var(--bg3);
     }
 }
 
@@ -187,8 +235,8 @@ form{
 input[type="file"]:focus,
     select:focus{
     border-color: var(--bg);
-    box-shadow: 0 0 0 0.1rem rgb(75, 154, 238);
-    background-color: var(--bg);
+    box-shadow: 0 0 0 0.1rem rgb(61, 153, 99);
+    background-color: var(--bg3);
 }
 
 input[type="file"] {
@@ -279,6 +327,17 @@ input[type="file"]::file-selector-button:hover {
         font-size: 1rem;
         font-weight: 100;
         color: var(--color2);
+        margin-top: 0.5rem;
+    }
+
+    span{
+        color: brown;
+        font-family: var(--font-family);
+    }
+
+    small{
+        font-family: var(--font-family);
+        font-size: 0.5rem;
     }
 }
 
@@ -411,5 +470,235 @@ button{
 button:hover{
     transition: all 0.5s;
     border: 0.5rem solid var(--bg3);
+    color: var(--border2);
 }
 
+
+
+/* --- RESPONSIVIDADE DE TABLET ---*/
+
+@media (max-width: 992px) {
+
+    
+    form {
+        width: 100%;
+        min-width: 0;
+        align-items: stretch;
+    }
+
+    .etapa {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        padding: 1rem 1.5rem;
+    }
+
+    
+    .dados-form {
+        width: 100%;
+        min-width: 0;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem 1.5rem;
+    }
+
+    .campos-form {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .campos-form input,
+    .campos-form select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    
+    .dados-form-anexo {
+        width: 100%;
+        min-width: 0;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .anexos-form {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .anexos-form input {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    
+    .termos-checkbox {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.75rem;
+    }
+
+    
+    .dados-checkbox-estrangerio,
+    .dados-checkbox-deficiencia,
+    .dados-checkbox-setor,
+    .dados-checkbox-campos-estrangerio,
+    .dados-checkbox {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .dados-checkbox {
+        flex-wrap: wrap;
+    }
+
+    .campos-checkbox-setor,
+    .campos-checkbox-estrangeiro {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+}
+
+
+/* --- RESPONSIVIDADDE PRA CELULAR ---*/
+
+@media (max-width: 600px) {
+
+    
+    header {
+        padding: 1rem;
+        flex-direction: column;
+
+        p{
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+        }
+    }
+
+    header img {
+        min-width: 0;
+        max-width: 12rem;
+    }
+
+    
+    .apresentacao {
+        padding: 0 1rem;
+        text-align: center;
+
+        h1{
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+    }
+
+    
+    .principal {
+        padding: 0.75rem;
+        width: 100%;
+    }
+
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .etapa {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        padding: 1rem;
+        height: 80vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    
+    .etapa h2 {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        font-size: 0.7rem;
+    }
+
+    
+    .dados-form {
+        display: grid;
+        width: 100%;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .campos-form {
+        display: grid;
+        width: 100%;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    
+    .campos-form input,
+    .campos-form select {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    
+    .dados-form-anexo {
+        display: grid;
+        width: 100%;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .anexos-form {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .anexos-form input {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    
+    .termos-checkbox {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.75rem;
+    }
+
+    
+    .dados-checkbox-estrangerio,
+    .dados-checkbox-deficiencia,
+    .dados-checkbox-setor,
+    .dados-checkbox-campos-estrangerio,
+    .dados-checkbox {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .dados-checkbox {
+        flex-wrap: wrap;
+    }
+
+    .campos-checkbox-setor,
+    .campos-checkbox-estrangeiro {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    
+    button {
+        max-width: 100%;
+    }
+
+}
